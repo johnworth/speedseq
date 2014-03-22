@@ -162,8 +162,6 @@ def main(args):
 	#bwa install
 	bwa = INSTALLER("bwa", args.quiet)
 	bwa.check_install("bwa")
-	if (bwa.isInstalled):
-		bwa.get_update()
 	if (bwa.notInstalled or bwa.update):
 		url = "http://sourceforge.net/projects/bio-bwa/files/bwa-0.7.6a.tar.bz2"
 		bwa.download("curl", url)
@@ -174,8 +172,6 @@ def main(args):
 	#freebayes install
 	freebayes = INSTALLER("freebayes", args.quiet)
 	freebayes.check_install("freebayes")
-	if (freebayes.isInstalled):
-		freebayes.get_update()
 	if (freebayes.notInstalled or freebayes.update):
 		url="git://github.com/ekg/freebayes"
 		freebayes.download("git", url)
@@ -184,8 +180,6 @@ def main(args):
     	#gemini install
 	gemini = INSTALLER("gemini", args.quiet)
 	gemini.check_install("gemini")
-	if (gemini.isInstalled):
-		gemini.get_update()
 	if (gemini.notInstalled or gemini.update):
 		url = "https://raw.github.com/arq5x/gemini/master/gemini/scripts/gemini_install.py"
 		gemini.download("wget", url)
@@ -194,8 +188,6 @@ def main(args):
 	#gsl install
 	gsl = INSTALLER("gsl", args.quiet)
 	gsl.check_install("gsl-config")
-	if (gsl.isInstalled):
-		gsl.get_update()
 	if (gsl.notInstalled or gsl.update):
 		url = "ftp://ftp.gnu.org/gnu/gsl/gsl-1.9.tar.gz"
 		gsl.download("curl", url)
@@ -205,8 +197,6 @@ def main(args):
 	#lumpy install
 	lumpy = INSTALLER("lumpy", args.quiet)
 	lumpy.check_install("lumpy")
-	if (lumpy.isInstalled):
-		lumpy.get_update()
 	if (lumpy.notInstalled or lumpy.update):
 		url="https://github.com/arq5x/lumpy-sv/archive/v0.1.5.tar.gz"
 		lumpy.download("curl", url)
@@ -217,8 +207,6 @@ def main(args):
 	#parallel install
 	parallel = INSTALLER("parallel", args.quiet)
 	parallel.check_install("parallel")
-	if (parallel.isInstalled):
-		parallel.get_update()
 	if (parallel.notInstalled or parallel.update):
 		url = "http://ftp.gnu.org/gnu/parallel/parallel-20100424.tar.bz2"
 		parallel.download("curl", url)
@@ -228,8 +216,6 @@ def main(args):
 	#sambamba install
 	sambamba = INSTALLER("sambamba_v0.4.4", args.quiet)
 	sambamba.check_install("sambamba_v0.4.4")
-	if (sambamba.isInstalled):
-		sambamba.get_update()
 	if (sambamba.notInstalled or sambamba.update):
 		url = "https://github.com/lomereiter/sambamba/releases/download/v0.4.4/sambamba_v0.4.4_centos5.tar.bz2"
 		sambamba.download("curl", url)
@@ -238,8 +224,6 @@ def main(args):
 	#samblaster install	
 	samblaster = INSTALLER("samblaster", args.quiet)
 	samblaster.check_install("samblaster")
-	if (samblaster.isInstalled):
-		samblaster.get_update()
 	if (samblaster.notInstalled or samblaster.update):
 		url = "git://github.com/GregoryFaust/samblaster.git"
 		samblaster.download("git", url)
@@ -248,8 +232,6 @@ def main(args):
 	#snpeff install
 	snpeff = INSTALLER("snpeff", args.quiet)
 	snpeff.check_install("snpeff")
-	if (snpeff.isInstalled):
-		snpeff.get_update()
 	if (snpeff.notInstalled or snpeff.update):
 		url = "http://sourceforge.net/projects/snpeff/files/snpEff_latest_core.zip"
 		snpeff.download("wget", url)
@@ -261,8 +243,6 @@ def main(args):
 		snpeff.cp_bin("snpEff/scripts", args.targetbin)
 	#vcflib install
 	vcflib = INSTALLER("vcflib", args.quiet)
-	if (vcflib.isInstalled):
-		vcflib.get_update()
 	if (vcflib.notInstalled or vcflib.update):
 		url = "https://github.com/ekg/vcflib"
 		vcflib.download("git", url)
